@@ -1,0 +1,8 @@
+@use '../../styles/variables';
+
+.form-error {
+  color: variables.$lightTextColor;
+  margin: variables.$gutter * 0.5 0;
+  padding: variables.$gutter * 0.5;
+  background-color: #a00c0a99;
+}

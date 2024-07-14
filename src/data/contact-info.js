@@ -1,0 +1,38 @@
+export default [
+  {
+    name: 'Florence Carlin',
+    picture: '/assets/pp-florence.webp',
+    dev: 'Développeuse Back-end',
+    rôle: 'Product Owner',
+    email: 'florenc.carlin@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/florence-carlin/',
+    github: 'https://github.com/FlorenceCarlin',
+  },
+  {
+    name: 'David Bassi',
+    picture: 'assets/pp-david.webp',
+    dev: 'Développeur Front-end',
+    rôle: 'Scrum-Master',
+    email: 'src/assets/pp-david.jpg',
+    linkedin: 'https://www.linkedin.com/in/david-bassi/',
+    github: 'https://github.com/DavidBASSI21',
+  },
+  {
+    name: 'Denovann Belloir',
+    picture: 'assets/pp-denovann.webp',
+    dev: 'Développeur Front-end',
+    rôle: 'Lead dev front & référent technique',
+    email: 'denovann4@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/denovann/',
+    github: 'https://github.com/Deunoh',
+  },
+  {
+    name: 'Sonia Hammou',
+    picture: 'assets/pp-fake-sonia.webp',
+    dev: 'Développeuse Back-end',
+    rôle: 'Lead dev back & référente technique',
+    email: 'soniahammou.design@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/sonia-hammou/',
+    github: 'https://github.com/soniahammou',
+  },
+];

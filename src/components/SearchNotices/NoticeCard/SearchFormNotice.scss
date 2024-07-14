@@ -1,0 +1,45 @@
+@use '../../../styles/variables';
+
+.searchformNotice-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+
+  .searchformNotice-label {
+    color: variables.$darkTextColor;
+    margin: variables.$gutter * 0.5 0;
+  }
+  .searchformNotice-input {
+    height: 2em;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: variables.$gutter;
+    &:focus {
+      border: 1px solid variables.$emphaseColor;
+    }
+    &::placeholder {
+      padding-left: 5px;
+    }
+  }
+  .searchformNotice-button {
+    border: none;
+    margin-bottom: variables.$gutter;
+    padding: 8px 5px;
+    color: variables.$lightTextColor;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: 0.3s;
+    &--green {
+      background-color: variables.$emphaseGreen;
+    }
+    &--red {
+      background-color: variables.$emphaseColor;
+    }
+    &:active {
+      scale: 0.95;
+      transition: 0.3s;
+    }
+  }
+}

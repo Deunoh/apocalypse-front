@@ -1,0 +1,55 @@
+@use '../../../styles/variables';
+
+.article-search-card-found {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+
+}
+.article-search-card-found span {
+  font-family: variables.$mainFont;
+  font-size: variables.$fsStandard * 0.7;
+  font-weight: variables.$fwStandard * 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  background: variables.$emphaseGreen;
+  background: linear-gradient(
+    variables.$emphaseGreen 0%,
+    variables.$emphaseGreen 100%
+  );
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px;
+  right: -21px;
+}
+.article-search-card-found span::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid variables.$emphaseGreen;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid variables.$emphaseGreen;
+}
+.article-search-card-found span::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid variables.$emphaseGreen;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid variables.$emphaseGreen;
+
+}

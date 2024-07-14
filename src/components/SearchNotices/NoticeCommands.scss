@@ -1,0 +1,50 @@
+@use '../../styles/variables';
+
+.commands-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: variables.$gutter * 2 0 variables.$gutter * 1.5;
+  justify-content: space-evenly;
+
+  .commands-button {
+    scale: 1.15;
+    height: 45px;
+    width: 45px;
+    border: none;
+    border-radius: 45px;
+    color: variables.$lightColor;
+    transition: 0.3s;
+    &:active {
+      scale: 0.9;
+      transition: 0.3s;
+    }
+    &--icon {
+      display: flex;
+      margin: 0 auto;
+      scale: 2;
+    }
+    &--red {
+      background-color: variables.$emphaseColor;
+    }
+    &--blue {
+      background-color: variables.$emphaseBlue;
+    }
+    &--green {
+      background-color: variables.$emphaseGreen;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .commands-container {
+    scale: 1.2;
+  }
+}
+
+@media (max-width: 992px) {
+  .commands-container {
+    scale: 0.9;
+    margin: 0 auto variables.$gutter auto;
+  }
+}

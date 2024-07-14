@@ -1,0 +1,19 @@
+@use '../../styles/variables';
+
+.homeCategories-container {
+  display: flex;
+  width: 100%;
+  margin-top: variables.$gutter * 3;
+  flex-wrap: wrap;
+  gap: variables.$gutter * 5;
+  justify-content: center;
+  margin-bottom: variables.$gutter * 3;
+}
+
+@media (max-width: 992px) {
+  .homeCategories-container {
+    width: 95%;
+    margin: 2em auto 6em;
+    gap: variables.$gutter;
+  }
+}

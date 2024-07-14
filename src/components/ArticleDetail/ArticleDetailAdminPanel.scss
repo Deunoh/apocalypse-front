@@ -1,0 +1,50 @@
+@use '../../styles/variables';
+
+.adminpanel-container {
+  display: flex;
+  width: 90%;
+  justify-content: end;
+  gap: variables.$gutter * 2.5;
+  margin: 0 auto variables.$gutter * 4;
+  .adminpanel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    border: none;
+    font-size: variables.$fsStandard * 2;
+    color: variables.$lightTextColor;
+    transition: 0.3s;
+
+    &--green {
+      background-color: variables.$emphaseGreen;
+    }
+    &--red {
+      background-color: variables.$emphaseColor;
+    }
+    &--blue {
+      background-color: variables.$emphaseBlue;
+    }
+    &:active {
+      scale: 0.85;
+      transition: 0.3s;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .adminpanel-container {
+    margin-top: -60px;
+    margin-bottom: variables.$gutter * 6;
+  }
+}
+
+@media (max-width: 576px) {
+  .adminpanel-container {
+    margin-top: -60px;
+    margin-bottom: variables.$gutter * 6;
+    justify-content: center;
+  }
+}

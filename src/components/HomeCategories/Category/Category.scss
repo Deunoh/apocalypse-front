@@ -1,0 +1,62 @@
+@use '../../../styles/variables';
+
+.homeCategory-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 150px;
+  // height: 150px;
+  // background-color: variables.$lightColor;
+  text-align: center;
+  gap: 2px;
+  // color: black;
+  transition: 0.3s;
+  // border-radius: 3px;
+
+  flex-direction: column;
+  color: variables.$lightColor;
+}
+
+// .homeCategory-button {
+//   font-size: variables.$fsStandard;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border: none;
+//   border-radius: 3px;
+//   &:hover {
+//     background-color: variables.$emphaseColor;
+//     color: variables.$lightColor;
+//     transition: 0.3s;
+//     scale: 1.1;
+//   }
+// }
+.homeCategory-button {
+  all: unset;
+}
+.homeCategory-icon {
+  filter: drop-shadow(2px 2px 2px #000);
+  margin-bottom: variables.$gutter;
+  transition: 0.2s;
+  &:hover {
+    color: variables.$emphaseColor;
+    scale: 1.1;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 992px) {
+  .homeCategory-container {
+    width: 40%;
+  }
+  .homeCategory-icon {
+    filter: none;
+  }
+  // .homeCategory-container:last-child {
+  //   margin-bottom: 100px;
+  // }
+}
+
+//  margin: 2em auto 6em;

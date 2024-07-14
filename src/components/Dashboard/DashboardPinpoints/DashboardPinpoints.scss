@@ -1,0 +1,81 @@
+@use '../../../styles/variables';
+
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.dashboard-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  min-width: 900px; // width minimum for mobile
+}
+
+.dashboard-table-row {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid variables.$lightColor;
+}
+
+.dashboard-table-row-item {
+  display: flex;
+  padding: 5px 20px;
+  // width: 20%;
+  margin: variables.$gutter * 0.5 0;
+  overflow: hidden;
+  &--title {
+    font-weight: 600;
+  }
+  &--description {
+    width: 60%;
+  }
+  &--id {
+    width: 5% !important;
+  }
+  &--latitude {
+    width: 10% !important;
+  }
+  &--longitude {
+    width: 10% !important;
+  }
+  &--type {
+    width: 10% !important;
+  }
+  &--button {
+    width: 10% !important;
+  }
+  &-button {
+    justify-content: center;
+  }
+}
+
+.dashboard-table-row-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: variables.$fsStandard * 1.2;
+  color: variables.$lightTextColor;
+
+  &--green {
+    background-color: variables.$emphaseGreen;
+  }
+  &--red {
+    background-color: variables.$emphaseColor;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-container {
+    width: none;
+  }
+}

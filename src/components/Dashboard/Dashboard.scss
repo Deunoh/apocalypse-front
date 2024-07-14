@@ -1,0 +1,102 @@
+@use '../../styles/variables';
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: variables.$gutter * 2 auto;
+  justify-content: center;
+  .dashboard-title {
+    text-align: center;
+    font-size: variables.$fsStandard * 2;
+    margin-bottom: variables.$gutter;
+    font-weight: variables.$fwStandard * 1.5;
+  }
+  .dashboard-tiles {
+    display: flex;
+    // width: 70%;
+    margin: 0 auto;
+    gap: 5rem;
+    margin-bottom: variables.$gutter * 2;
+  }
+  .dashboard-tiles-button {
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    color: variables.$lightColor;
+    font-family: variables.$mainFont;
+    font-size: variables.$fsStandard;
+    // padding: variables.$gutter * 0.5 variables.$gutter;
+    border-radius: 3px;
+    &--active {
+      border-bottom: 1px solid variables.$emphaseColor;
+      color: variables.$emphaseColor;
+      font-weight: variables.$fwStandard * 1.5;
+    }
+  }
+}
+
+.dashboard-subcomponent-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+
+  gap: 1rem;
+  .dashboard-subcomponent-title {
+    width: 90%;
+    font-size: variables.$fsStandard * 1.2;
+    margin-bottom: variables.$gutter;
+  }
+}
+.dashboard-subcomponent-container--users {
+  flex-direction: column;
+}
+
+@media (max-width: 992px) {
+  .dashboard-subcomponent-container--users {
+    flex-direction: row;
+    margin-bottom: 6rem;
+  }
+  .dashboard-container {
+    width: 90%;
+    margin-bottom: 0;
+    .dashboard-title {
+      width: 100%;
+    }
+    .dashboard-tiles {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1px;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .dashboard-tiles-button {
+      margin-bottom: 1rem;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      width: 45%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      border: none;
+      background-color: variables.$lightColor;
+      color: variables.$emphaseColor;
+
+      height: 50px;
+      &--active {
+        background-color: variables.$emphaseColor;
+        color: variables.$lightColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-title {
+    font-size: variables.$fsStandard * 1.5;
+  }
+}

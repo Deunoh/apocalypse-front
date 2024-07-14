@@ -1,0 +1,150 @@
+@use '../../../styles/variables';
+
+.searchform-block-divided {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: variables.$gutter;
+}
+
+.searchform-title {
+  font-size: 45px;
+  display: flex;
+  width: 56%;
+  justify-content: flex-start;
+  margin: variables.$gutter auto;
+}
+
+.searchform-block {
+  width: 49%;
+
+  &--description,
+  &--upload {
+    width: 100%;
+  }
+}
+
+.searchform-block-input--description {
+  margin-bottom: variables.$gutter;
+  // border-radius: 3px;
+  height: 150px;
+
+  &::placeholder {
+    padding: 5px;
+    font-family: variables.$mainFont;
+  }
+}
+
+.searchform-block--file-container {
+  margin-bottom: variables.$gutter;
+}
+
+.searchform {
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+  margin: 0 auto;
+
+  .searchform-block {
+    display: flex;
+    flex-direction: column;
+
+    &--wide {
+      width: 100%;
+    }
+
+    .searchform-block-label {
+      font-size: variables.$fsStandard * 1.2;
+      margin-bottom: variables.$gutter * 0.5;
+
+      &-file {
+        width: 100%;
+      }
+    }
+
+    .searchform-block-input {
+      height: variables.$gutter * 3;
+      border: none;
+      border-radius: 3px;
+      margin-bottom: variables.$gutter;
+
+      &:focus {
+        border: 1px solid variables.$emphaseColor;
+      }
+
+      &::placeholder {
+        padding-left: 5px;
+        font-family: variables.$mainFont;
+        font-size: variables.$fsStandard;
+      }
+    }
+  }
+}
+
+#addpicture {
+  display: none;
+}
+
+.searchform-file-icon {
+  margin-right: 10px;
+}
+
+.searchform-block-label-file {
+  display: flex;
+  font-size: 16px;
+  font-family: Arial;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #eaeaea;
+  color: #111f24;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #111f24;
+    color: variables.$lightColor;
+  }
+}
+
+.searchform-block-textarea {
+  border: none;
+  border-radius: 3px;
+  resize: none;
+  &:focus {
+    border: 1px solid variables.$emphaseColor;
+  }
+
+  &::placeholder {
+    padding-left: 5px;
+    font-family: variables.$mainFont;
+    font-size: variables.$fsStandard;
+  }
+}
+
+.searchform-button {
+  background-color: variables.$emphaseColor;
+  height: 40px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  margin-bottom: variables.$gutter;
+  border-radius: 3px;
+}
+
+@media (max-width: 992px) {
+  .searchform-component-container {
+    margin-bottom: 6em;
+    .searchform {
+      width: 90%;
+    }
+    .searchform-title {
+      font-size: variables.$fsStandard * 1.5;
+      margin-left: 5%;
+    }
+  }
+}

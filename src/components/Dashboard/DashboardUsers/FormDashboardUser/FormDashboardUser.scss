@@ -1,0 +1,92 @@
+@use '../../../../styles/variables';
+
+.userform-component-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.userform-title {
+  font-size: 45px;
+  display: flex;
+  width: 56%;
+  justify-content: flex-start;
+  margin: variables.$gutter auto;
+}
+.userform-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+.userform {
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+  margin: 0 auto;
+  .userform-block {
+    // margin: 0 auto;
+    display: flex;
+    // width: 100%;
+    flex-direction: column;
+    .userform-block-label {
+      font-size: variables.$fsStandard * 1.2;
+      margin-bottom: variables.$gutter * 0.5;
+    }
+    .userform-block-input {
+      height: variables.$gutter * 3;
+      border: none;
+      border-radius: 3px;
+      width: 100%;
+      margin-bottom: variables.$gutter * 0.8;
+      padding-left: 5px;
+      &:focus {
+        border: 1px solid variables.$emphaseColor;
+      }
+      &::placeholder {
+        padding-left: 5px;
+      }
+    }
+  }
+  .userform-button {
+    border: none;
+    height: variables.$gutter * 2.5;
+    width: 100%;
+    background-color: variables.$emphaseColor;
+    color: variables.$lightColor;
+    font-size: variables.$fsStandard * 1.1;
+    font-weight: 600;
+    margin-bottom: variables.$gutter * 2.5;
+    margin-top: variables.$gutter * 1.5;
+    border-radius: 3px;
+    transition: 0.3s;
+    &:active {
+      scale: 0.9;
+      transition: 0.3s;
+    }
+  }
+  .userform-bottomline {
+    font-size: variables.$gutter * 0.7;
+    margin-bottom: variables.$gutter;
+  }
+  .userform-redirect {
+    font-size: variables.$gutter * 0.7;
+    margin-bottom: variables.$gutter * 1.5;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .userform-title {
+    display: flex;
+    width: 80%;
+    font-size: variables.$fsStandard * 2.5;
+  }
+  .userform-container {
+    width: 100%;
+    margin-bottom: variables.$gutter * 8;
+  }
+  .userform {
+    width: 80%;
+  }
+}

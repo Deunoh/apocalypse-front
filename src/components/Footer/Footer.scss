@@ -1,0 +1,17 @@
+@use '../../styles/variables';
+
+.footer-container {
+  // position: relative;
+  bottom: 0px;
+  left: 0;
+  right: 0px;
+  margin-top: auto;
+}
+.footer-ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: variables.$gutter;
+  margin: variables.$gutter auto;
+}

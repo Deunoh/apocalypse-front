@@ -1,0 +1,135 @@
+@use '../../../styles/variables';
+
+.searchbar-container {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  height: 30px;
+  width: 325px;
+  border-radius: 3px;
+  align-items: center;
+  margin-bottom: variables.$gutter;
+
+  .searchbar-icon {
+    position: absolute;
+    left: 15px;
+    color: #686868;
+    top: 50%;
+    transform: translateY(-50%);
+
+    align-items: center;
+  }
+  .searchbar-user {
+    left: 44px;
+    top: 50%;
+    width: 80%;
+    transform: translateY(-50%);
+    position: absolute;
+    border: none;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  min-width: 900px; // width minimum for mobile
+}
+
+.dashboard-table-row {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid variables.$lightColor;
+}
+
+.dashboard-table-row-item {
+  display: flex;
+  padding: 5px 20px;
+  width: 20%;
+  margin: variables.$gutter * 0.5 0;
+  overflow: hidden;
+  &--title {
+    font-weight: 600;
+  }
+  &--searchpicture {
+    .dashboard-table-row--image {
+      width: 80px;
+      border-radius: 5px;
+    }
+    width: fit-content;
+  }
+  &--searchname {
+    width: 10%;
+  }
+  &--searchfirstname {
+    width: 10%;
+  }
+  &--searchstatus {
+    width: 10%;
+  }
+  &--searchcity {
+    width: 10%;
+  }
+  &--searchdescription {
+    width: 35%;
+  }
+  &-button {
+    justify-content: center;
+  }
+}
+
+.dashboard-table-row-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: variables.$fsStandard * 1.2;
+  color: variables.$lightTextColor;
+
+  &--green {
+    background-color: variables.$emphaseGreen;
+  }
+  &--red {
+    background-color: variables.$emphaseColor;
+  }
+}
+
+@media (max-width: 992px) {
+  .searchbar-container {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .searchbar-container {
+    width: 100%;
+    .searchbar-user {
+      width: 75%;
+    }
+  }
+  // .dashboard-table-row-item {
+  //   width: 35%;
+  //   padding-left: 0;
+  //   &--role {
+  //     display: none;
+  //   }
+  //   &--verified {
+  //     display: none;
+  //   }
+  //   &-button {
+  //     width: 10%;
+  //   }
+  // }
+}

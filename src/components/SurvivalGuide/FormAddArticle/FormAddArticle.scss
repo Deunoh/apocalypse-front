@@ -1,0 +1,149 @@
+@use '../../../styles/variables';
+
+.articleform-component-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.articleform-title {
+  font-size: 1.5rem;
+  display: flex;
+  width: 80%;
+  justify-content: flex-start;
+  margin: variables.$gutter auto;
+}
+
+.articleform-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.articleform-block--file-container {
+  margin-bottom: variables.$gutter;
+}
+
+.articleform {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+
+  .articleform-block {
+    display: flex;
+    flex-direction: column;
+
+    .articleform-block-label {
+      font-size: variables.$fsStandard * 1.2;
+      margin-bottom: variables.$gutter * 0.5;
+    }
+
+    .articleform-block-input {
+      height: variables.$gutter * 3;
+      border: none;
+      border-radius: 3px;
+      margin-bottom: variables.$gutter * 2;
+
+      &:focus {
+        border: 1px solid variables.$emphaseColor;
+      }
+
+      &::placeholder {
+        padding-left: 5px;
+        font-family: variables.$mainFont;
+        font-size: variables.$fsStandard;
+      }
+    }
+
+    #addpicture {
+      display: none;
+    }
+
+    .articleform-file-icon {
+      margin-right: 10px;
+    }
+
+    .articleform-block-label-file {
+      display: flex;
+      font-size: 16px;
+      font-family: Arial;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      background-color: #eaeaea;
+      color: #111f24;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: #111f24;
+        color: variables.$lightColor;
+      }
+    }
+
+    .file-name {
+      margin-top: 10px;
+    }
+
+    .articleform-block-textarea {
+      border: none;
+      border-radius: 3px;
+
+      &:focus {
+        border: 1px solid variables.$emphaseColor;
+      }
+
+      &::placeholder {
+        padding-left: 5px;
+        font-family: variables.$mainFont;
+        font-size: variables.$fsStandard;
+      }
+    }
+  }
+
+  .articleform-button {
+    border: none;
+    height: variables.$gutter * 2.5;
+    width: 100%;
+    background-color: variables.$emphaseColor;
+    color: variables.$lightColor;
+    font-size: variables.$fsStandard * 1.1;
+    font-weight: 600;
+    margin-bottom: variables.$gutter * 2.5;
+    margin-top: variables.$gutter * 1.5;
+    border-radius: 3px;
+  }
+
+  .articleform-select {
+    margin-bottom: variables.$gutter * 2;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: variables.$mainFont;
+    padding: 8px 5px;
+  }
+
+  .articleform-span {
+    margin-top: variables.$gutter;
+    font-size: variables.$fsStandard * 0.8;
+  }
+}
+
+@media (min-width: 769px) {
+  .articleform-title {
+    width: 56%;
+    font-size: 45px;
+  }
+
+  .articleform {
+    width: 56%;
+  }
+}

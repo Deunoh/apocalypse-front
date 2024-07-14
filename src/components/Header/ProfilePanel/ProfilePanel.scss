@@ -1,0 +1,94 @@
+@use '../../../styles/variables';
+
+.header-loginform {
+  &-container {
+    position: relative;
+    width: 260px;
+    z-index: 50;
+    transition: 0.5s;
+
+    &--visible {
+      transform: translateX(-250px);
+      transition: 0.5s;
+    }
+  }
+  &-avatar {
+    position: absolute;
+    right: 30px;
+  }
+  &-button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: variables.$emphaseColor;
+    color: variables.$lightColor;
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    &--avatar {
+      font-size: variables.$fsStandard * 1.1;
+    }
+    &--close {
+      font-size: variables.$fsStandard * 1.5;
+    }
+    &:active {
+      transition: 0.3s;
+      scale: 0.8;
+    }
+  }
+  &-greeting {
+    margin-bottom: variables.$gutter;
+  }
+  &-form {
+    background-color: rgb(0 0 0 / 75%);
+    border-radius: 3px;
+    position: absolute;
+    right: -220px;
+    display: flex;
+    flex-direction: column;
+    padding: variables.$gutter;
+    &-label {
+      margin-bottom: 5px;
+    }
+    &-input {
+      margin-bottom: variables.$gutter;
+      height: variables.$gutter * 2.5;
+      border-radius: 3px;
+      border: lightgrey;
+      padding-left: 5px;
+      &::placeholder {
+        padding-left: 5px;
+      }
+    }
+    &-button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-button {
+      height: variables.$gutter * 2.5;
+      border-radius: 3px;
+      border: none;
+      color: variables.$emphaseColor;
+      font-weight: variables.$fwStandard * 1.4;
+      margin-bottom: variables.$gutter;
+      transition: 0.3s;
+      &--dashboard {
+        width: 100%;
+      }
+      &:active {
+        scale: 0.9;
+        transition: 0.3s;
+      }
+      &-delete {
+        background-color: variables.$emphaseColor;
+        color: variables.$lightTextColor;
+      }
+    }
+  }
+}
+.form-error {
+  background-color: variables.$emphaseColor;
+  margin-bottom: variables.$gutter * 1.5;
+  font-size: variables.$fsStandard * 0.9;
+}

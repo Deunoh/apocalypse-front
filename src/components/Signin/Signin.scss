@@ -1,0 +1,101 @@
+@use '../../styles/variables';
+
+.signinform-component-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.signinform-title {
+  font-size: 45px;
+  display: flex;
+  width: 56%;
+  justify-content: flex-start;
+  margin: variables.$gutter auto;
+}
+.signinform-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+.signinform {
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+  margin: 0 auto;
+  .signinform-block {
+    // margin: 0 auto;
+    display: flex;
+    // width: 100%;
+    flex-direction: column;
+    .signinform-block-label {
+      font-size: variables.$fsStandard * 1.2;
+      margin-bottom: variables.$gutter * 0.5;
+    }
+    .signinform-block-input {
+      height: variables.$gutter * 3;
+      border: none;
+      border-radius: 3px;
+      width: 100%;
+      margin-bottom: variables.$gutter * 0.8;
+      &:focus {
+        border: 1px solid variables.$emphaseColor;
+      }
+      &::placeholder {
+        padding-left: 5px;
+      }
+    }
+  }
+  .signinform-button {
+    border: none;
+    height: variables.$gutter * 2.5;
+    width: 100%;
+    background-color: variables.$emphaseColor;
+    color: variables.$lightColor;
+    font-size: variables.$fsStandard * 1.1;
+    font-weight: 600;
+    margin-bottom: variables.$gutter * 2.5;
+    margin-top: variables.$gutter * 1.5;
+    border-radius: 3px;
+    transition: 0.3s;
+    &:active {
+      scale: 0.9;
+      transition: 0.3s;
+    }
+  }
+  .signinform-bottomline {
+    font-size: variables.$gutter * 0.7;
+    margin-bottom: variables.$gutter;
+  }
+  .signinform-redirect {
+    font-size: variables.$gutter * 0.7;
+    margin-bottom: variables.$gutter * 1.5;
+    text-decoration: underline;
+  }
+  .consent-account-container {
+    margin-top: variables.$gutter;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    input {
+      margin-right: variables.$gutter;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .signinform-title {
+    display: flex;
+    width: 80%;
+    font-size: variables.$fsStandard * 2.5;
+  }
+  .signinform-container {
+    width: 100%;
+    margin-bottom: variables.$gutter * 8;
+  }
+  .signinform {
+    width: 80%;
+  }
+}

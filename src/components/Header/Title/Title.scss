@@ -1,0 +1,26 @@
+@use '../../../styles/variables';
+
+.header-title {
+  display: flex;
+  font-family: variables.$titleFont;
+  font-size: variables.$fsStandard * 2.5;
+  margin-left: variables.$gutter * 0.3;
+  align-items: center;
+
+  &-container {
+    display: flex;
+    width: 20vw;
+    padding-left: variables.$gutter;
+  }
+  &-logo {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-title-logo {
+    width: 50px;
+    aspect-ratio: 1/1;
+    display: flex;
+  }
+}

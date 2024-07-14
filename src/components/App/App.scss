@@ -1,0 +1,9 @@
+@use '../../styles/variables';
+
+.App {
+  background: variables.$backgroundColor;
+  min-height: 100vh;
+  color: variables.$lightTextColor;
+  font-family: variables.$mainFont;
+  overflow-x: hidden;
+}

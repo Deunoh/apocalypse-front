@@ -1,0 +1,50 @@
+@use '../../styles/variables' as v;
+
+.map-info {
+  position: relative;
+  z-index: 0;
+}
+
+.map-info-select {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  padding: 5px 8px;
+  border: none;
+  background-color: v.$lightTextColor;
+  color: v.$emphaseColor;
+  box-shadow: 2px 1px 4px 1px #8b8b8b;
+  border-radius: 3px;
+  font-family: v.$mainFont;
+}
+
+.map-info::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #000000;
+  clip-path: polygon(8% 17%, 0% 25%, 50% 84%, 100% 25%, 92% 17%, 50% 65%);
+}
+
+.button-toggle-form {
+  z-index: 99999;
+  color: #3a8300;
+  position: absolute;
+  bottom: 2.5rem;
+  right: 1rem;
+  transition: 0.5s;
+
+  &--open {
+    color: #a00c0a;
+    transform: rotate(135deg);
+  }
+}
+
+// https://www.cssportal.com/css-select-dropdown-generator/

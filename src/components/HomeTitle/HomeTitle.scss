@@ -1,0 +1,21 @@
+@use '../../styles/variables';
+
+.home-title-container {
+  display: flex;
+  width: 80%;
+  margin: variables.$gutter * 2 auto;
+  flex-direction: column;
+  text-align: center;
+  .home-title {
+    font-family: variables.$titleFont;
+    font-size: variables.$fsStandard * 4;
+    margin-bottom: variables.$gutter * 0.5;
+  }
+  .home-paragraph {
+    line-height: variables.$gutter * 2;
+  }
+  strong {
+    font-weight: bold;
+    color: #fff;
+  }
+}

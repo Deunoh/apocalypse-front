@@ -1,0 +1,29 @@
+@use '../../styles/variables';
+
+.rgpd {
+  hyphens: auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: variables.$gutter * 3 auto;
+  &-title {
+    font-size: variables.$fsStandard * 2;
+    font-weight: 600;
+    margin-bottom: variables.$gutter;
+  }
+  &-subtitle {
+    width: fit-content;
+    border-bottom: 1px solid variables.$emphaseColor;
+    font-size: variables.$fsStandard * 1.4;
+    font-weight: 500;
+    margin: variables.$gutter 0 variables.$gutter variables.$gutter;
+  }
+  &-text {
+    margin: 0 0 variables.$gutter * 0.7 variables.$gutter * 3;
+    text-align: justify;
+    line-height: 1.5em;
+  }
+  &-strong {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,31 @@
+@use '../../../styles/variables';
+
+.header-navbarDesktop-container {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header-navbarDesktop-container {
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    .navbar-desktop {
+      display: flex;
+      gap: variables.$gutter * 1.5;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 80%;
+      font-weight: 500;
+      .navbar-desktop-label {
+        &--active {
+          color: variables.$emphaseColor;
+          border-bottom: 1px solid variables.$emphaseColor;
+        }
+      }
+      .navbar-desktop-label--soon {
+        color: grey;
+      }
+    }
+  }
+}

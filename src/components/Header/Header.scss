@@ -1,0 +1,9 @@
+@use '../../styles/variables.scss';
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  margin: variables.$gutter auto;
+  height: 6.4vh;
+}

@@ -1,0 +1,36 @@
+@use '../../styles/variables';
+
+.navbar {
+  &-mobile {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    height: fit-content;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: variables.$lightColor;
+    text-align: center;
+    justify-content: center;
+    z-index: 1001;
+    &-item-icon {
+      font-size: variables.$fsStandard * 1.5;
+      margin-bottom: 7px;
+      &--active {
+        color: variables.$emphaseColor;
+      }
+    }
+    &-icon--soon {
+      color: gray;
+    }
+    &-item-label {
+      font-size: variables.$fsStandard * 0.6;
+    }
+  }
+  &-item {
+    padding: variables.$gutter * 0.5 0;
+    flex-direction: column;
+    color: variables.$darkTextColor;
+    width: calc(100% / 6);
+  }
+}

@@ -1,0 +1,158 @@
+@use '../../styles/variables';
+
+.searchNotice-container {
+  display: flex;
+  width: 90%;
+  gap: 1%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.searchNotice-title {
+  width: 90%;
+  margin: variables.$gutter * 1.5 auto;
+  font-size: variables.$fsStandard * 1.2;
+}
+
+.notices {
+  display: flex;
+}
+
+.searchNotice-form-container {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  height: 40px;
+  left: 5%;
+  width: 44%;
+  border-radius: 3px;
+  align-items: center;
+  margin-bottom: variables.$gutter;
+  .searchNotice-form-icon {
+    position: absolute;
+    left: 15px;
+    color: #686868;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+  }
+  .searchNotice-form {
+    left: 44px;
+    top: 50%;
+    width: 90%;
+    transform: translateY(-50%);
+    position: absolute;
+    border: none;
+  }
+}
+.searchNotice-add-link {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 135%;
+  height: 41px;
+  width: 300px;
+  padding: 0 8px;
+  border-radius: 3px;
+  background-color: variables.$emphaseColor;
+  transition: 0.3s;
+  &--icon {
+    scale: 2;
+  }
+  &:active {
+    scale: 0.95;
+    transition: 0.3s;
+  }
+}
+.notconnected-popup--searchNotice {
+  display: flex;
+  align-items: center;
+  background-color: #555;
+  color: #eaeaea;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3764705882);
+  text-align: center;
+  border-radius: 5px;
+  padding: 1em;
+  position: fixed;
+  top: 9rem;
+  right: 30%;
+  /* bottom: 9em; */
+  height: fit-content;
+  width: fit-content;
+  z-index: 1000;
+  &::before {
+    content: '';
+    border-bottom: 20px solid #555;
+    border-left: 25px solid transparent;
+    position: absolute;
+    bottom: 35px;
+    /* top: 0; */
+    right: 42%;
+    transform: rotate(225deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .searchNotice-container:last-of-type {
+    margin-bottom: variables.$gutter * 5;
+  }
+  .searchNotice-form-container {
+    width: 82%;
+    height: 40px;
+    .searchNotice-add-link {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 105%;
+      width: 40px;
+      &--icon {
+        scale: 2;
+      }
+      &:active {
+        scale: 0.95;
+        transition: 0.3s;
+      }
+    }
+    .notconnected-popup--searchNotice {
+      right: 5%;
+      &::before {
+        right: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .searchNotice-form-container {
+    width: 60%;
+    transform: translateX(-6%);
+    left: 18%;
+    .searchNotice-form {
+      width: 75%;
+    }
+    .searchNotice-add-link {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      left: 114%;
+      border-radius: 3px;
+      background-color: variables.$emphaseColor;
+      transition: 0.3s;
+      &--icon {
+        scale: 2;
+      }
+      &:active {
+        scale: 0.95;
+        transition: 0.3s;
+      }
+    }
+    .notconnected-popup--searchNotice {
+      right: -28%;
+      top: 4rem;
+    }
+  }
+  .searchNotice-title {
+    width: 75%;
+  }
+}

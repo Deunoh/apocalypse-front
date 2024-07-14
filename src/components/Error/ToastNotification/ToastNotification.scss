@@ -1,0 +1,76 @@
+@use '../../../styles/variables' as var;
+
+:root {
+  --notification-background: #313e2c;
+  --notification-primary: #aaec8a;
+  --notification-error-background: #8b1a1a; // Background color for error notification
+  --notification-error-primary: #ffffff; // Text color for error notification
+  --background: #faf9ff;
+}
+
+.notification-success,
+.notification-error {
+  position: fixed;
+  width: max-content;
+  left: 0;
+  right: 0;
+  top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(5.8rem);
+  opacity: 0;
+  visibility: hidden;
+  animation: fade-in 3s linear forwards;
+}
+
+.notification-success {
+  background-color: var(--notification-background);
+  color: var(--notification-primary);
+}
+
+.notification-error {
+  background-color: var(--notification-error-background);
+  color: var(--notification-error-primary);
+}
+
+.notification__icon-success {
+  color: #3a8300;
+  margin-right: calc(var.$gutter * 0.5);
+}
+
+.notification__icon-error {
+  color: #fff;
+  margin-right: calc(var.$gutter * 0.5);
+}
+
+.notification__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5.8rem);
+  }
+  5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5.8rem);
+    display: none;
+  }
+}
